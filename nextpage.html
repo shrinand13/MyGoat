@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <style>
+       
+
+        p {
+            font-style: italic;
+        }
+
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            width: 200px;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+
+        a {
+            font-style: italic;
+            color:white
+          (1, 35, 21);
+        }
+
+        b {
+            font-style: italic;
+            color:rgb(228, 59, 22);
+        }
+        c{
+            font-style: italic;
+            color:white
+            (11, 11, 18);
+        }
+
+        d {
+            font-style: italic;
+            color:white
+            (69, 156, 199);
+        }
+
+        e {
+            font-style: italic;
+            color:rgb(212, 237, 21);
+        }
+        f {
+            font-style: italic;
+            color:rgb(241, 12, 12);
+        }
+
+
+
+        body {
+            background-image: url('stadium2.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .parallax-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        .content {
+            height: 2000px;
+            padding: 50px;
+            color: #fff;
+        }
+
+
+    </style>
+</head>
+<body>
+ 
+  <div class="parallax-overlay"></div>
+  <div class="content">
+    <h1 font>This is how his career took shape </h1>
+
+
+    <div class="gallery">
+      <div class="gallery-item">
+          <img src="sporting1.jpg" alt="Image 1">
+          <a> Ronaldo started his professional football career at Sporting Lisbon, a Portuguese club. He joined the club's youth academy at a young age and quickly made a name for himself with his exceptional skills and goal-scoring ability.
+            Ronaldo made his first-team debut for Sporting Lisbon in 2002 at the age of 17.</a>
+        
+      </div>
+      <div class="gallery-item">
+          <img src="man.jpg" alt="Image 2">
+          <b>Cristiano Ronaldo's time at Manchester United was a period of tremendous 
+            success and growth for the Portuguese footballer. 
+            He joined the club in 2003 from Sporting Lisbon and quickly established himself as a key player in the team.
+          
+Cristiano Ronaldo's time at Manchester United was a period of tremendous success and growth for the Portuguese footballer. He joined the club in 2003 from Sporting Lisbon and quickly established himself as a key player in the team.
+
+During his six seasons at Manchester United, Ronaldo won numerous titles and individual awards. He played a pivotal role in helping the club win three English Premier League titles,
+ an FA Cup, two League Cups, and the UEFA Champions League in the 2007-2008 season.
+ He won the prestigious FIFA Ballon d'Or award in 2008, recognizing him as the best player 
+ in the world. He played at united in 2 turns.</b>
+          
+      </div>
+      <div class="gallery-item">
+          <img src="real.jpeg" alt="Image 3">
+          <c>Cristiano Ronaldo's time at Real Madrid was nothing short of extraordinary. He joined the Spanish club in 2009 from Manchester United, and his impact was immediate and immense.
+
+            During his nine seasons at Real Madrid, Ronaldo became the club's all-time leading goal scorer, surpassing countless records along the way. He won an incredible four UEFA Champions League titles with the team, helping them establish a dominant era in European football. Ronaldo's remarkable goal-scoring ability was on full display, as he netted an astonishing 450 goals in just 438 appearances for Real Madrid.
+            
+            His individual achievements were equally remarkable. Ronaldo won the Ballon d'Or
+             award four times while at Real Madrid</c>
+          
+      </div>
+      <div class="gallery-item">
+          <img src="juve.jpg" alt="Image 4">
+          <d>Cristiano Ronaldo's transfer to Juventus in 2018 created a lot of excitement and anticipation among fans and football enthusiasts. He joined the Italian club after spending nine successful seasons at Real Madrid.
+
+            Ronaldo's arrival at Juventus brought an immediate boost to the team's profile and aspirations. His goal-scoring ability and winning mentality were seen as valuable assets for Juventus, who were aiming for continued domestic dominance and success in European competitions.
+            
+            During his time at Juventus, Ronaldo showcased his exceptional skills and continued to score goals at an impressive rate. He helped the team secure consecutive Serie A titles in his first two seasons, playing a pivotal role in their success. Ronaldo's presence and leadership qualities had a positive impact on the squad,
+             inspiring his teammates and elevating the overall performance of the team.</d>
+       
+      </div>
+      <div class="gallery-item">
+          <img src="alnassr.jpg" alt="Image 5">
+          <e>
+        
+
+       Cristiano Ronaldo joined the Saudi Arabia club as a free agent on a 
+       €200 million per year contract for two seasons.
+      And it is the current club of cr7.</e>
+          
+      </div>
+      <div class="gallery-item">
+          <img src="portugal1.jpg" alt="Image 6">
+          <f>Cristiano Ronaldo is one of the most iconic players in the history
+             of the Portuguese national team. He has represented Portugal in numerous
+              international competitions, including the UEFA European Championship and the FIFA World Cup.
+
+            Ronaldo made his debut for the Portuguese national team in 2003 and
+             has since become their all-time leading goal scorer. He has been an integral part of the team's success, 
+            helping Portugal win the UEFA European Championship in 2016 and the UEFA Nations League in 2019.
+            
+            Known for his exceptional skills, athleticism, and goal-scoring ability, 
+            Ronaldo has consistently performed at a high level for Portugal. 
+            He has showcased his leadership qualities and has been a source of inspiration for his teammates.</f>
+          
+      </div>
+
+      
+  </div>
+  <script>
+      window.addEventListener('scroll', function() {
+          var parallaxOverlay = document.querySelector('.parallax-overlay');
+          var scrollPosition = window.pageYOffset;
+          parallaxOverlay.style.opacity = 1 - (scrollPosition / 600);
+      });
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOAT</title>
+    <style>
+        .transition-effect {
+            width: 50px;
+            height: 50px;
+            background: white;
+            transition: width 2s;
+        }
+
+        .transition-effect:hover {
+            width: 300px;
+        }
+
+        .transition-effect-2 {
+            width: 50px;
+            height: 50px;
+            background: red;
+            transition: width 2s;
+        }
+
+        .transition-effect-2:hover {
+            width: 300px;
+        }
+
+        body {
+            background-image: url('ronaldo.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        a {
+            color: pink;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .center-right-text {
+            position: absolute;
+            top: 50%;
+            right: 350px;
+            transform: translate(0, -50%);
+            text-align: center;
+            color: white;
+            font-style: italic;
+            font-size: medium;
+        }
+
+        .toggle-button {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 3px;
+            background-color: white;
+            border: none;
+            cursor: grab;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .fa-instagram {
+            color: white;
+        }
+
+        .page-transition {
+            animation-name: fadeOut;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="bottom-right">take a look at cr7's journey</p>
+
+        <div class="slider">
+            <input type="checkbox" id="slider-toggle" class="slider-toggle" hidden>
+            <label for="slider-toggle" class="slider-button" onclick="navigateToNextPage()"></label>
+        </div>
+        <div id="transition-overlay"></div>
+
+        <script src="script.js"></script>
+
+        <h1 class="transition-effect"><span style="color: red;">CRISTIANO</span></h1>
+        <h2 class="transition-effect-2"><span style="color: white;">RONALDO</span></h2>
+
+        <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" style="font-size: 10px;" target="_blank">Wikipedia page of Ronaldo<br><br></a>
+        <a href="https://www.youtube.com/watch?v=OUKGsb8CpF8&ab_channel=Ronnie7M" target="_blank">Watch how Ronaldo plays<br></a>
+
+        <div class="center-right-text">
+            <h1 style="color: white;">Welcome</h1>
+            <p>This is Cristiano Ronaldo , widely regarded as greatest football player of all time. <br>
+              He plays for Portugal in international football and plays for Al nassr in Club football. <br>
+          He holds many major records on his name like: <br>
+                  Most goals scored in history of football <br>
+                  Most goals scored in Champions league football <br>
+                  Most hat-tricks in history of football <br>
+                  Most capped player in International football <br>
+                  And the list goes on .....
+          </p>
+        </div>
+
+        <a href="https://www.instagram.com/cristiano/" target="_blank" class="fa fa-instagram"></a>
+
+        <button style="color: red;" class="toggle-button" onclick="toggleBackgroundImage()">Siuuuuuuuuuuuuuuuuuu!</button>
+
+        <script>
+            function toggleBackgroundImage() {
+                var body = document.querySelector('body');
+                var currentImage = body.style.backgroundImage;
+                var newImage = currentImage.includes('ronaldo.jpg') ? 'url(ronaldo4.jpg)' : 'url(ronaldo.jpg)';
+                body.style.backgroundImage = newImage;
+            }
+
+            function navigateToNextPage() {
+                var body = document.querySelector('body');
+                body.classList.add('page-transition');
+                setTimeout(function () {
+                    window.location.href = 'nextpage.html';
+                }, 1000);
+            }
+        </script>
+    </body>
+</html>
